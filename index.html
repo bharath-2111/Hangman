@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="./script.js" defer></script>
+    <title>Hangman</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="upper">
+            <h1>Hangman - Game</h1>
+        </div>
+        <div class="lower">
+            <div class="left">
+                <div class="img">
+                    <div class="stand">
+                        <div id="pole"></div>
+                        <div id="top"></div>
+                        <div id="rope"></div>
+                    </div>
+                    <div class="hangman-img">
+                        <div id="head" class="ob"></div>
+                        <div id="body" class="ob"></div>
+                        <div id="rgtleg" class="ob"></div>
+                        <div id="lftarm" class="ob"></div>
+                        <div id="rgtarm" class="ob"></div>
+                        <div id="lftleg" class="ob"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                
+                <div class="refresh">
+                    <button onclick="refresh()">Refresh</button>
+                </div>
+                <div class="info">
+                    <div id="dashes"></div>
+                </div>
+                <div class="Guess-bar">
+                    <form onsubmit="guess(event)">
+                        <input id="gword" type="text" placeholder="Enter your Guess" />
+                        <button type="submit">Guess</button>
+                    </form>
+                </div>
+                <div class="Guesses">
+                    <label>Your Guesses</label>
+                    <div class="guess-box"></div> 
+                </div>
+                <div class="guess-info">
+                    <label id="tries">Total no. of tries left : <span></span></label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
